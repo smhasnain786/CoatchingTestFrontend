@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+#category-container {
+  padding-right: 0px !important;
+  padding-left: 0px !important;
+  height: 90vh;
+  position: relative;
+}
+
+.category-name {
+  display: block;
+  text-align: center;
+  font-weight: 800;
+  font-size: 96px;
+  transition: 1s all;
+  opacity: 0.2;
+  margin: 0 auto;
+  line-height: 1.1;
+  color: #000;
+  max-width: 960px;
+  font-family: "Plus Jakarta Sans", sans-serif !important;
+  letter-spacing: -6px;
+}
+
+.category-name:hover {
+  opacity: 0.5 !important;
+}
+
+.nav-slider>.slick-list>.slick-track>.slick-slide>div {
+  padding: 0 50px !important;
+}
+
+.nav-slider>.slick-list {
+  margin: 0 -50px !important;
+}
+
+.subCat-button {
+  margin: 5px 10px;
+  font-size: 15px;
+  padding: 8px 15px;
+  background-color: transparent;
+  border: 1px solid black;
+  color: #000;
+  text-transform: uppercase;
+  transition: background 0.4s ease-in-out;
+
+}
+
+.subCat {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.subCat-button:hover {
+  background: black;
+  color: #ffffff;
+}
+
+
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-slider>.slick-list>.slick-track>.slick-current>div>.category-name {
+
+  font-weight: 800 !important;
+  /* Make the center text bold */
+  opacity: 1 !important;
+  color: #000 !important;
+}
+
+.prev-button,
+.next-button {
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 0 15px;
+}
+
+.pagination-info {
+  font-size: 18px;
+  margin: 0 10px;
+  color: black;
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .category-name>span{
+    font-size: 46px !important;
+    letter-spacing: -2.5px !important;
+  }
+  #category-container {
+    height: 80vh;
+  }
+}
+
+/* For extra small screens (small phones) */
+@media (max-width: 575px) {
+  .category-name>span{
+    font-size: 46px !important;
+    letter-spacing: -2.5px !important;
+  }
+  #category-container {
+    height: 80vh;
+  }
+}
+
+/* Media query for small laptops (up to 13" screens, around 1280px width) */
+@media (min-width: 1024px) and (max-width: 1280px) {
+  .category-name {
+  
+    font-size: 80px !important;
+   
+  }
+  
+  
+  .nav-slider>.slick-list>.slick-track>.slick-slide>div {
+    padding: 0 50px !important;
+  }
+  
+  .nav-slider>.slick-list {
+    margin: 0 -50px !important;
+  }
+}
+
+/* Media query for medium laptops (14" - 15" screens, up to 1440px width) */
+@media (min-width: 1281px) and (max-width: 1440px) {
+  .category-name {
+  
+    font-size: 80px !important;
+   
+  }
+  
+  
+  .nav-slider>.slick-list>.slick-track>.slick-slide>div {
+    padding: 0 50px !important;
+  }
+  
+  .nav-slider>.slick-list {
+    margin: 0 -50px !important;
+  }
+}
+
+/* Media query for larger laptops (15" - 17" screens, up to 1600px width) */
+@media (min-width: 1441px) and (max-width: 1600px) {
+  
+}

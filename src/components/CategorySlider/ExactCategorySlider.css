@@ -1,0 +1,164 @@
+/* Main Category Slider Styles */
+.category-slider {
+  padding: 20px;
+  color: #fff;
+  text-align: center;
+  border-radius: 15px;
+  transition: background 1s ease-in-out;
+}
+
+.slick-slide {
+  width: auto;
+  /* Ensure slides are flexible */
+  padding: 0 90px;
+  /* Space between slides */
+  box-sizing: border-box;
+}
+
+.slick-track {
+  display: flex;
+  /* Make sure all slides align properly */
+}
+
+.slick-slide>div {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slick-slide p,
+.slick-slide h1,
+.slick-slide h2,
+.slick-slide span {
+  font-size: 98px;
+  /* Set the font size for all text inside slides */
+  text-align: center;
+  /* Align text to center, adjust if necessary */
+  white-space: nowrap;
+  /* Prevent text from wrapping if desired */
+}
+
+.category-slide {
+  padding: 20px;
+  transition: transform 0.5s, opacity 0.5s;
+  font-size: 1.5rem;
+  /* opacity: 0.5; */
+}
+
+.category-name {
+  display: block;
+  text-align: center;
+  font-weight: 800;
+  font-size: 96px;
+  transition: 1s all;
+  opacity: 0.2;
+  margin: 0 auto;
+  line-height: 1.1;
+  color: #000;
+  max-width: 960px;
+  /* font-family: 'circularspotifytext' !important; */
+  letter-spacing: -6px;
+}
+.category-name:hover{
+  opacity: 0.5 !important;
+}
+
+.active-slide .category-name {
+
+  font-weight: 800 !important;
+  /* Make the center text bold */
+  opacity: 1 !important;
+  color: #000 !important;
+}
+
+/* Dots */
+.slick-dots li button:before {
+  color: #ccc;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #fff;
+}
+
+/* Arrows */
+.slick-prev,
+.slick-next {
+  color: #fff;
+  z-index: 1;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+  color: #ddd;
+}
+
+/* Subcategory Container Styles */
+.subcategory-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.subcategory-item {
+  margin: 5px 10px;
+  font-size: 15px;
+  padding: 8px 15px;
+  background-color: transparent;
+  border: 1px solid black;
+  color: #000;
+  text-transform: uppercase;
+  transition: background  0.4s ease-in-out;
+
+}
+
+.subcategory-item:hover {
+  background: black;
+  color: #ffffff;
+
+}
+
+/* Fade-in and Fade-out animations */
+.fade-in {
+  opacity: 1;
+  transition: opacity 0.3s ease-in;
+  animation: fadeIn 0.5s forwards; /* Fade in */
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+  animation: fadeOut 0.5s forwards; /* Fade out */
+
+}
+@keyframes fadeIn {
+  0% { opacity: 0.09; }
+  100% { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0.09; }
+}
+
+.category-count {
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .category-name {
+    font-size: 1.2rem;
+  }
+
+  .active-slide .category-name {
+    font-size: 48px;
+    /* Smaller font size on mobile */
+  }
+
+  .subcategory-item {
+    font-size: 1rem;
+    /* Adjust subcategory font size for mobile */
+  }
+}
