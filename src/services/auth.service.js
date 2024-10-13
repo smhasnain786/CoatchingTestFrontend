@@ -39,5 +39,14 @@ let token = localStorage.getItem("token")
 };
     return await curd.get(url,{},headers)
 }
+export const userGoogleLogin = async(data) => {
+    const { MainUrl, endPoint } = dataUrl;
+    const url = MainUrl + endPoint.userGoogleLogin;
+let token = localStorage.getItem("token")
+ const headers = {
+    'Content-Type': 'application/json'
+};
+    return await curd.post(url,data,headers)
+}
 
 

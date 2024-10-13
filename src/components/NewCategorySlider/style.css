@@ -106,12 +106,17 @@
 /* For extra small screens (small phones) */
 @media (max-width: 575px) {
   .category-name>span{
-    font-size: 46px !important;
+    font-size: 43px !important;
     letter-spacing: -2.5px !important;
   }
   #category-container {
     height: 80vh;
   }
+  .subCat-button{
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+
 }
 
 /* Media query for small laptops (up to 13" screens, around 1280px width) */

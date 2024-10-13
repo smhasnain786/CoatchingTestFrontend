@@ -1,7 +1,7 @@
-export const imageUrl = "http://195.35.45.56:8002/uploads/"
-export const MainUrl = "http://195.35.45.56:8002/"
-// export const imageUrl = "http://localhost:8002/uploads/"
-// export const MainUrl = "http://localhost:8002/"
+// export const imageUrl = "http://195.35.45.56:8002/uploads/"
+// export const MainUrl = "http://195.35.45.56:8002/"
+export const imageUrl = "http://localhost:8002/uploads/"
+export const MainUrl = "http://localhost:8002/"
 // export const MainUrl = "https://api.coachingtest.in/"
 // export const imageUrl = "https://api.coachingtest.in/uploads/"
 
@@ -43,4 +43,5 @@ export const endPoint = {
     getAllDesign:"design/getAllDesign",
     addDataTranslate:"datatranslate/addDataTranslateFormDetails",
     getallPreviousYearPaper:"paper/getallPreviousYearPaper",
+    userGoogleLogin:"auth/google-login",
 }
