@@ -12,6 +12,7 @@ import Home from './Home';
 import Home2 from './Home2';
 import AboutUs from './AboutUs';
 import MyProfile from './MyProfile';
+import MyOrders from './MyOrders';
 import Services from './Services';
 import Faq from './Faq';
 import HelpDesk from './HelpDesk';
@@ -43,6 +44,8 @@ import BlogLargeSidebar from './BlogLargeSidebar';
 import BlogListSidebar from './BlogListSidebar';
 import BlogDetail from './BlogDetail';
 import ContactUs from './ContactUs';
+import ReturnPolicy from './ReturPolicy';
+import TermsAndConditions from './TermsAndConditions';
 
 import ErrorPage from './ErrorPage';
 import UnderConstruction from './UnderConstruction';
@@ -84,6 +87,7 @@ function Index(props){
                                         <Route path='/' element={<Home />} />
                                         <Route path='/about-us' element={<AboutUs />} />
                                         <Route path='/my-profile' element={<MyProfile />} />
+                                        <Route path='/my-orders' element={<MyOrders />} />
                                         <Route path='/services' element={<Services />} />
                                         <Route path='/faq' element={<Faq />} />
                                         <Route path='/help-desk' element={<HelpDesk />} />
@@ -96,6 +100,8 @@ function Index(props){
                                         <Route path='/previous-years' element={<PreviousYears />} />
                                         <Route path='/typing' element={<Typing />} />
                                         <Route path='/data-translate' element={<DataTranslate />} />
+                                        <Route path='/return-policy' element={<ReturnPolicy />} />
+                                        <Route path='/terms-and-conditions' element={<TermsAndConditions />} />
                                         <Route path='/signin' element={<SignIn />} />
                                         <Route path='/login' element={<Login />} />
                                         <Route path='/profile' element={<Profile />} />

@@ -5,12 +5,108 @@
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta name="description" content="Bookland-Book React Store Ecommerce Website"/>
-	<meta property="og:title" content="Bookland-Book React Store Ecommerce Website"/>
-	<meta property="og:description" content="Bookland-Book React Store Ecommerce Website"/>
-	<!-- <meta property="og:image" content="https://bookland.dexignzone.com/react/social-image.png"/> -->
-	<meta property="og:image" content="https://makaanlelo.com/tf_products_007/bookland/react/social-image.png"/>
+    <meta
+      name="description"
+      content="Bookland-Book React Store Ecommerce Website"
+    />
+    <meta
+      property="og:title"
+      content="Bookland-Book React Store Ecommerce Website"
+    />
+    <meta
+      property="og:description"
+      content="Bookland-Book React Store Ecommerce Website"
+    />
+    <!-- <meta property="og:image" content="https://bookland.dexignzone.com/react/social-image.png"/> -->
+    <meta
+      property="og:image"
+      content="https://makaanlelo.com/tf_products_007/bookland/react/social-image.png"
+    />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <style>
+      .wrapper{
+        display: flex;
+       flex-direction: column;
+       position: fixed;
+        bottom: 20px;
+        left:10px;
+        gap: 10px;
+        z-index: 999;
+      }
+      .wrapper .button {
+        display: inline-block;
+        height: 60px;
+        width: 60px;
+        float: left;
+        text-decoration: none;
+        margin: 0 5px;
+        overflow: hidden;
+        background: #fff;
+        border-radius: 50px;
+        cursor: pointer;
+        box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease-out;
+      }
+      .wrapper .button:hover {
+        width: 200px;
+      }
+      .wrapper .button .icon {
+        display: inline-block;
+        height: 60px;
+        width: 60px;
+        color: #000;
+        text-align: center;
+        border-radius: 50px;
+        box-sizing: border-box;
+        line-height: 60px;
+        transition: all 0.3s ease-out;
+      }
+      .wrapper .button:nth-child(1):hover .icon {
+        background: #4267b2;
+      }
+      .wrapper .button:nth-child(2):hover .icon {
+        background: #1da1f2;
+      }
+      .wrapper .button:nth-child(3):hover .icon {
+        background: #e1306c;
+      }
+      .wrapper .button:nth-child(4):hover .icon {
+        background: #333;
+      }
+      .wrapper .button:nth-child(5):hover .icon {
+        background: #ff0000;
+      }
+      .wrapper .button .icon i {
+        font-size: 25px;
+        line-height: 60px;
+        transition: all 0.3s ease-out;
+      }
+      .wrapper .button:hover .icon i {
+        color: #fff;
+      }
+      .wrapper .button span {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 60px;
+        margin-left: 10px;
+        transition: all 0.3s ease-out;
+      }
+      .wrapper .button:nth-child(1) span {
+        color: #4267b2;
+      }
+      .wrapper .button:nth-child(2) span {
+        color: #1da1f2;
+      }
+      .wrapper .button:nth-child(3) span {
+        color: #e1306c;
+      }
+      .wrapper .button:nth-child(4) span {
+        color: #333;
+      }
+      .wrapper .button:nth-child(5) span {
+        color: #ff0000;
+      }
+    </style>
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -25,12 +121,11 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>Bookland-Book React Store Ecommerce Website</title>
+    <title>Coaching Test & Notes</title>
   </head>
   <body>
-  
     <noscript>You need to enable JavaScript to run this app.</noscript>
-	
+
     <div id="root"></div>
     <!--
       This HTML file is a template.
@@ -42,6 +137,38 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-	<script id="DZScript" src="https://dzassets.s3.amazonaws.com/w3-global.js"></script>
+    <!-- <script id="DZScript" src="https://dzassets.s3.amazonaws.com/w3-global.js"></script> -->
+    <div class="wrapper">
+      <a href="#" class="button">
+        <div class="icon">
+          <i class="fab fa-facebook-f"></i>
+        </div>
+        <span>Facebook</span>
+      </a>
+      <a href="#" class="button">
+        <div class="icon">
+          <i class="fab fa-twitter"></i>
+        </div>
+        <span>Twitter</span>
+      </a>
+      <a href="#" class="button">
+        <div class="icon">
+          <i class="fab fa-instagram"></i>
+        </div>
+        <span>Instagram</span>
+      </a>
+      <a href="#" class="button">
+        <div class="icon">
+          <i class="fab fa-github"></i>
+        </div>
+        <span>Github</span>
+      </a>
+      <a href="#" class="button">
+        <div class="icon">
+          <i class="fab fa-youtube"></i>
+        </div>
+        <span>YouTube</span>
+      </a>
+    </div>
   </body>
 </html>

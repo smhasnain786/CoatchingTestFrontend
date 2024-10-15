@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
-import { Nav, Tab } from 'react-bootstrap';
+import { Nav, Tab,Dropdown } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
+import { HotToaster } from "../utils/Toaster"
 
 //import {Collapse, Dropdown} from 'react-bootstrap';
 
@@ -57,53 +58,63 @@ function CommentBlog({ title, image }) {
 function ShopDetail() {
 
     const [count, setCount] = useState(0);
-    const [bookDetails, setBookDetails] = useState([])
-    const [relatedBooks, setRelatedBooks] = useState([])
-    const params = useParams()
-    useEffect(() => {
-        BookGet()
+    const [bookDetails, setBookDetails] = useState([]);
+    const [relatedBooks, setRelatedBooks] = useState([]);
+    const params = useParams();
 
-    }, [])
+    useEffect(() => {
+        BookGet();
+    }, [params.id]);
+
     const BookGet = async () => {
         let data = {
             id: params.id
-        }
-        let result = await BookDetailsById(data)
+        };
+        let result = await BookDetailsById(data);
         if (result.status) {
             console.log(result.data);
-
-            setBookDetails(result.data)
+            setBookDetails(result.data);
         }
-    }
+    };
+
     const getRelatedBooks = async (ctg_id) => {
         let data = {
             categoryId: ctg_id
-        }
-        let result = await getBooksAccordingToCategory(data)
+        };
+        let result = await getBooksAccordingToCategory(data);
         if (result?.status) {
-            console.log("related Books", result?.data);
-
-            setRelatedBooks(result.data)
+            console.log("Related Books", result?.data);
+            setRelatedBooks(result.data);
         }
-    }
+    };
+
+    useEffect(() => {
+        // Fetch related books when bookDetails updates and has a valid categoryId
+        if (bookDetails[0]?.categoryId) {
+            getRelatedBooks(bookDetails[0].categoryId);
+        }
+    }, [bookDetails]);
+
     const addToCart = async (item) => {
-        let data = {
-            bookId: item._id
-        }
-        let result = await addBookToCart(data)
+        console.log("item", item);
 
-    }
-    let ctg_ID = bookDetails[0]?.categoryId
-    getRelatedBooks(ctg_ID)
+        let data = {
+            fileId: item.fileId,
+            bookId: item.bookId
+        };
+        let result = await addBookToCart(data);
+        console.log(result);
+        HotToaster(result.status,result.message)
+    };
     function createSlug(text) {
         return text
-          .toLowerCase() // Convert to lowercase
-          .replace(/[^a-z0-9\s-]/g, '') // Remove non-alphanumeric characters except for spaces
-          .trim() // Remove leading and trailing whitespace
-          .replace(/\s+/g, '-') // Replace spaces with hyphens
-          .replace(/-+/g, '-'); // Remove multiple consecutive hyphens
-      }
-      
+            .toLowerCase() // Convert to lowercase
+            .replace(/[^a-z0-9\s-]/g, '') // Remove non-alphanumeric characters except for spaces
+            .trim() // Remove leading and trailing whitespace
+            .replace(/\s+/g, '-') // Replace spaces with hyphens
+            .replace(/-+/g, '-'); // Remove multiple consecutive hyphens
+    }
+
     return (
         <>
             <div className="page-content bg-grey">
@@ -161,7 +172,7 @@ function ShopDetail() {
                                                     <p className="p-lr10">Rs {bookDetails[0]?.MRP}</p>
                                                 </div>
                                                 <div className="product-num">
-                                                    <div className="quantity btn-quantity style-1 me-3">
+                                                    {/* <div className="quantity btn-quantity style-1 me-3">
                                                         <button className="btn btn-plus" type="button"
                                                             onClick={() => setCount(count + 1)}
                                                         >
@@ -174,8 +185,26 @@ function ShopDetail() {
                                                             <i className="ti-minus"></i>
                                                         </button>
 
+                                                    </div> */}
+                                                    <div className="form-group">
+                                                      
+                                                        <Dropdown>
+                                                            <Dropdown.Toggle className="i-false">Add To Cart<i className="ms-4 font-14 fa-solid fa-caret-down" /></Dropdown.Toggle>
+                                                            <Dropdown.Menu>
+                                                                {
+                                                                   bookDetails[0]?.bookFilesData.map((val)=>{
+                                                                    return (
+                                                                        <Dropdown.Item onClick={() => addToCart({fileId:val._id,bookId:val.bookId})}>{val.fileType}</Dropdown.Item>
+                                                                    )
+                                                                   })
+                                                                   
+                                                                }
+                                                                
+                                                               
+                                                            </Dropdown.Menu>
+                                                        </Dropdown>
                                                     </div>
-                                                    <Link to={"shop-cart"} onClick={() => addToCart(bookDetails[0])} className="btn btn-primary btnhover btnhover2"><i className="flaticon-shopping-cart-1"></i> <span>Add to cart</span></Link>
+                                                    {/* <Link to={"#"} onClick={() => addToCart(bookDetails[0].bookFilesData)} className="btn btn-primary btnhover btnhover2"><i className="flaticon-shopping-cart-1"></i> <span>Add to cart</span></Link> */}
                                                     <div className="bookmark-btn style-1 d-none d-sm-block">
                                                         <input className="form-check-input" type="checkbox" id="flexCheckDefault1" />
                                                         <label className="form-check-label" for="flexCheckDefault1">
@@ -314,7 +343,7 @@ function ShopDetail() {
                                             <div className="col-xl-12 col-lg-6" key={index}>
                                                 <div className="dz-shop-card style-5">
                                                     <div className="dz-media">
-                                                        <img src={imageUrl+data.bookIcon} alt="" />
+                                                        <img src={imageUrl + data.bookIcon} alt="" />
                                                     </div>
                                                     <div className="dz-content">
                                                         <h5 className="subtitle"> <Link to={`/books-detail/${data._id}/${createSlug(data.bookName)}`}>{data.bookName}</Link></h5>

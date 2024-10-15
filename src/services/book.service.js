@@ -40,6 +40,15 @@ export const getBookContentFileByID = async(data) => {
   };
   return await curd.post(url,data,headers)
 }
+export const getBookContentFileByFileID = async(data) => {
+  const { MainUrl, endPoint } = dataUrl;
+  const url = MainUrl + endPoint.getBookContentFileByFileID;
+  let token = localStorage.getItem("token")
+  const headers = {
+     'Content-Type': 'application/json'
+  };
+  return await curd.post(url,data,headers)
+}
 
 
 export const getBooksAccordingToCategory = async(data) => {

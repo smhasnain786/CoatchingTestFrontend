@@ -181,7 +181,8 @@ function PrivacyPolicy() {
                                         <ul className="menu">
                                             <li className="menu-item"><Link to={"/about-us"}>About Us</Link></li>
                                             <li className="menu-item active"><Link to={"/privacy-policy"}>Privacy Policy</Link></li>
-                                            <li className="menu-item "><Link to={"/help-desk"}>Help Desk</Link></li>
+                                            <li className="menu-item "><Link to={"/return-policy"}>Return Policy</Link></li>
+                                            <li className="menu-item "><Link to={"/terms-and-conditions"}>Terms And Conditions</Link></li>
                                             <li className="menu-item"><Link to={"/contact-us"}>Contact Us</Link></li>
                                         </ul>
                                     </div>

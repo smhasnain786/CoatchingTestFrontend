@@ -130,12 +130,12 @@ console.log("noOfCart",noOfCart,'totalAmountAndQuentity',totalAmountAndQuentity)
 					<div className="extra-nav">
 						<div className="extra-cell">
 							<ul className="navbar-nav header-right">
-								<li className="nav-item">
+								{/* <li className="nav-item">
 									<Link to={"wishlist"} className="nav-link">
 										<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none" /><path d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z" /></svg>
 										<span className="badge">21</span>
 									</Link>
-								</li>
+								</li> */}
 								{console.log("cart===>>>",cart)}
 								<Dropdown as="li" className="nav-item">
 									<Dropdown.Toggle as="button" type="button" className="nav-link box cart-btn i-false">
@@ -199,18 +199,18 @@ console.log("noOfCart",noOfCart,'totalAmountAndQuentity',totalAmountAndQuentity)
 													<span className="ms-2">Profile</span>
 												</div>
 											</Link>
-											<Link to={"shop-cart"} className="dropdown-item d-flex justify-content-between align-items-center ai-icon">
+											<Link to={"/my-orders"} className="dropdown-item d-flex justify-content-between align-items-center ai-icon">
 												<div>
 													<svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 0 24 24" width="20px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none" /><path d="M15.55 13c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.37-.66-.11-1.48-.87-1.48H5.21l-.94-2H1v2h2l3.6 7.59-1.35 2.44C4.52 15.37 5.48 17 7 17h12v-2H7l1.1-2h7.45zM6.16 6h12.15l-2.76 5H8.53L6.16 6zM7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z" /></svg>
 													<span className="ms-2">My Order</span>
 												</div>
 											</Link>
-											<Link to={"wishlist"} className="dropdown-item d-flex justify-content-between align-items-center ai-icon">
+											{/* <Link to={"wishlist"} className="dropdown-item d-flex justify-content-between align-items-center ai-icon">
 												<div>
 													<svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 0 24 24" width="20px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none" /><path d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z" /></svg>
 													<span className="ms-2">Wishlist</span>
 												</div>
-											</Link>
+											</Link> */}
 										</div>
 										<div className="dropdown-footer">
 											<button   onClick={() => {
@@ -218,7 +218,7 @@ console.log("noOfCart",noOfCart,'totalAmountAndQuentity',totalAmountAndQuentity)
 												localStorage.removeItem("token");
 												setIsLoggedIn(false)
 												setProfileContainer(!profileContainer)
-												navigate("/");
+												window.location.href="/"
 											}} className="btn btn-primary w-100 btnhover btn-sm">Log Out</button>
 										</div>
 									</Dropdown.Menu>
@@ -237,25 +237,10 @@ console.log("noOfCart",noOfCart,'totalAmountAndQuentity',totalAmountAndQuentity)
 					</div>
 
 					{/* <!-- header search nav --> */}
-					<div className="header-search-nav">
+					{/* <div className="header-search-nav">
 						<form className="header-item-search">
 							<div className="input-group search-input">
-								{/*<select className="default-select">
-									<option>Category</option>
-									<option>Photography </option>
-									 <option>Arts</option>
-									<option>Adventure</option>
-									<option>Action</option>
-									<option>Games</option>
-									<option>Movies</option>
-									<option>Comics</option>
-									<option>Biographies</option>
-									<option>Children’s Books</option>
-									<option>Historical</option>
-									<option>Contemporary</option>
-									<option>Classics</option>
-									<option>Education</option> 
-								</select> */}
+								
 								<Dropdown className="dropdown bootstrap-select default-select drop-head">
 									<Dropdown.Toggle as="div" className="i-false">{selectBtn}
 										<i className="ms-4 font-10 fa-solid fa-chevron-down"></i>
@@ -281,7 +266,7 @@ console.log("noOfCart",noOfCart,'totalAmountAndQuentity',totalAmountAndQuentity)
 								<button className="btn" type="button"><i className="flaticon-loupe"></i></button>
 							</div>
 						</form>
-					</div>
+					</div> */}
 				</div>
 			</div>
 			<div className={`sticky-header main-bar-wraper navbar-expand-lg ${headerFix ? "is-fixed" : ""}`}>

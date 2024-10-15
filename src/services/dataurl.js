@@ -1,17 +1,19 @@
 // export const imageUrl = "http://195.35.45.56:8002/uploads/"
 // export const MainUrl = "http://195.35.45.56:8002/"
-export const imageUrl = "http://localhost:8002/uploads/"
-export const MainUrl = "http://localhost:8002/"
-// export const MainUrl = "https://api.coachingtest.in/"
-// export const imageUrl = "https://api.coachingtest.in/uploads/"
+// export const imageUrl = "http://localhost:8002/uploads/"
+// export const MainUrl = "http://localhost:8002/"
+export const MainUrl = "https://api.coachingtest.in/"
+export const imageUrl = "https://api.coachingtest.in/uploads/"
 
 
 export const endPoint = {
+    getUserOrders:"order/orders-by-user-id",
     categoryGet:"book/get-category",
     getBookList:"book/get-books",
     getAllEbooks:"book/getAllEBooks",
     getBookContentById:"book/get-books-content-by-id",
     getBookContentFileById:"book/get-books-content-file-by-id",
+    getBookContentFileByFileID:"book/get-books-content-file-by-file-id",
     getBooksByCategory:"book/get-books-by-category-id",
     getPoster:"book/get-poster",
     getPermotionModal:"book/getPermotionModal",

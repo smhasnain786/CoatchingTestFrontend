@@ -71,7 +71,7 @@ function Footer({footerChange, logoImage}){
 									<div className="footer-logo logo-white">
 										<Link to={""}><img src={logoImage} alt="" /></Link> 
 									</div>
-									<p className="text">Bookland is a Book Store Ecommerce Website Template by DexignZone lorem ipsum dolor sit</p>
+									<p className="text">Welcome to www.coachingtest.com, a one-stop solution for coaching institutes seeking high-quality educational materials in digital formats.</p>
 									<div className="dz-social-icon style-1">
 										<ul>
 											<li><a href="https://www.facebook.com/dexignzone" target="_blank" rel="noreferrer"><i className="fa-brands fa-facebook-f"></i></a></li>
@@ -89,20 +89,20 @@ function Footer({footerChange, logoImage}){
 										<li><Link to={"about-us"}>About us</Link></li>
 										<li><Link to={"contact-us"}>Contact us</Link></li>
 										<li><Link to={"privacy-policy"}>Privacy Policy</Link></li>
-										<li><Link to={"pricing"}>Pricing Table</Link></li>
+										<li><Link to={"terms-and-conditions"}>Terms and Conditions</Link></li>
 										<li><Link to={"faq"}>FAQ</Link></li>
 									</ul>
 								</div>
 							</div>
 							<div className="col-xl-2 col-lg-3 col-sm-4 col-4 wow fadeInUp" data-wow-delay="0.3s">
 								<div className="widget widget_services">
-									<h5 className="footer-title">Bookland ?</h5>
+									<h5 className="footer-title">Coaching Test & Notes ?</h5>
 									<ul>
-										<li><Link to={""}>Bookland</Link></li>
-										<li><Link to={"services"}>Services</Link></li>
-										<li><Link to={"books-detail"}>Book Details</Link></li>
-										<li><Link to={"blog-detail"}>Blog Details</Link></li>
-										<li><Link to={"books-grid-view"}>Shop</Link></li>
+										<li><Link to={"/current-affairs"}>Current Affairs</Link></li>
+										<li><Link to={"/test-series"}>Test Series</Link></li>
+										<li><Link to={"/ebooks"}>Ebooks</Link></li>
+										<li><Link to={"/services"}>Services</Link></li>
+										<li><Link to={"/previous-years"}>Previous Year Papers</Link></li>
 									</ul>   
 								</div>
 							</div>
@@ -112,9 +112,9 @@ function Footer({footerChange, logoImage}){
 									<ul>
 										<li><Link to={"services"}>Download</Link></li>
 										<li><Link to={"help-desk"}>Help Center</Link></li>
-										<li><Link to={"shop-cart"}>Shop Cart</Link></li>
-										<li><Link to={"shop-login"}>Login</Link></li>
-										<li><Link to={"about-us"}>Partner</Link></li>
+										<li><Link to={"/cart"}>Shop Cart</Link></li>
+										<li><Link to={"/shop-login"}>Login</Link></li>
+										<li><Link to={"/about-us"}>seller</Link></li>
 									</ul>
 								</div>
 							</div>
@@ -124,17 +124,16 @@ function Footer({footerChange, logoImage}){
 									<ul>
 										<li>
 											<i className="flaticon-placeholder"></i>
-											<span>832  Thompson Drive, San Fransisco CA 94107,US</span>
+											<span>Artoni, Agra, UP, 282007</span>
 										</li>
 										<li>
 											<i className="flaticon-phone"></i>
-											<span>+123 345123 556<br/>
-											+123 345123 556</span>
+											<span>+91 7017944662<br/>
+											+91 7417109998</span>
 										</li>
 										<li>
 											<i className="flaticon-email"></i> 
-											<span>support@bookland.id<br/>
-											info@bookland.id</span>
+											<span>support@coachingtest.com<br/></span>
 										</li>
 									</ul>
 								</div>
@@ -146,13 +145,13 @@ function Footer({footerChange, logoImage}){
 					<div className="container">
 						<div className="row fb-inner">
 							<div className="col-lg-6 col-md-12 text-start"> 
-								<p className="copyright-text">Bookland Book Store Ecommerce Website - © 2022 All Rights Reserved</p>
+								<p className="copyright-text">Coaching Test & Notes - © 2024 All Rights Reserved</p>
 							</div>
 							<div className="col-lg-6 col-md-12 text-end"> 
 								<p>Made with <span className="heart"
 									onClick={heartToggle}
 								></span> by 
-								<a href="https://dexignzone.com/" target="_blank"> DexignZone</a></p>
+								<a href="https://varautomation.com/" target="_blank"> Varautomations</a></p>
 							</div>
 						</div>
 					</div>
